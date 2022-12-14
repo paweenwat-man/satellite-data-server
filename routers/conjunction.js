@@ -11,7 +11,9 @@ const TLE_PATH = path.resolve(__dirname,'../tle.txt')
 
 async function downloadTLE() {
   const response = await fetch(URL)
-  const tle = await response.text().trim()
+  const tle = await response.text()
+  console.log(tle)
+  return
   await fs.writeFile(TLE_PATH,tle)
 }
 
@@ -29,8 +31,9 @@ async function downloadTLE() {
       await downloadTLE()
     }
   } catch (err) {
-    console.log('File not found, downloading new file into our server')
-    await downloadTLE()
+    console.log(`${err.name} : ${err.message}`)
+    // console.log('File not found, downloading new file into our server')
+    // await downloadTLE()
   }
 })()
 
