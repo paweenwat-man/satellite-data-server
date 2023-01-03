@@ -43,5 +43,5 @@ npm start
 
 # Data Providers
 
-![Celestrak Logo](https://celestrak.org/images/CT-logo-lg-horz-1600x550TM.png)
 * ## [Celestrak](https://celestrak.org)
+[![Celestrak Logo](https://celestrak.org/images/CT-logo-lg-horz-1600x550TM.png)](#)
